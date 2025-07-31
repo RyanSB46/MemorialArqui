@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 🧾 Sistema de Geração de Tabelas em PDF com Base em JSON
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto tem como objetivo facilitar a geração de relatórios e tabelas customizadas em formato PDF a partir de dados inseridos via formulário. O fluxo é dividido entre front-end e back-end, permitindo controle, personalização e exportação eficiente de informações.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Visão Geral
 
-### `npm start`
+O sistema segue o seguinte fluxo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Inserção de Dados via Formulário Web (Front-End)**
+2. **Salvamento dos Dados em Arquivo `.json` no Servidor**
+3. **Geração de Tabela Formatada a partir do JSON**
+4. **Exportação Automática para PDF (Gerado pelo Back-End)**
+5. **Visualização ou Download do PDF via Navegador**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Estrutura do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+/frontend
+  └── React app para entrada de dados
+/backend
+  ├── Armazenamento do arquivo .json
+  ├── Geração do PDF
+  └── Rota para envio do PDF ao front-end
+/output
+  └── Relatórios gerados em .pdf e .json
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ✅ Inserção dinâmica e personalizada de dados (títulos, colunas, linhas)
+- ✅ Criação automática de arquivo `.json`
+- ✅ Geração de tabela formatada em PDF
+- ✅ Visualização do PDF em nova aba ou download direto
+- ✅ Arquitetura modular: front separado do back
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧰 Tecnologias Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Front-End
+- React.js
+- Axios (para requisições)
+- TailwindCSS (para estilização responsiva e centralizada)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Back-End
+- Node.js com Express
+- `fs` para manipulação de arquivos
+- `pdfkit` ou `puppeteer` para geração de PDF (a depender da implementação final)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Instalação e Execução
 
-## Learn More
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Instale as dependências
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Back-End:**
+```bash
+cd backend
+npm install
+```
 
-### Code Splitting
+**Front-End:**
+```bash
+cd ../frontend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Execute os servidores
 
-### Analyzing the Bundle Size
+**Back-End:**
+```bash
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Front-End:**
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📤 Exportação de PDF
 
-### Advanced Configuration
+- Clique no botão "Exportar PDF" no front-end.
+- A requisição será feita ao back-end.
+- O PDF será gerado e aberto automaticamente em uma nova aba ou será baixado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Este projeto é de uso livre para fins de estudo, desenvolvimento e aprimoramento pessoal. Para uso comercial, recomenda-se ajustar a licença de acordo com a necessidade do autor.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👤 Autor
+
+Desenvolvido por [Ryan Sena](https://github.com/seu-usuario)
+
+---
+
+## 🧠 Notas Finais
+
+Este sistema é ideal para geração de memoriais descritivos, relatórios técnicos e documentos organizados a partir de dados estruturados.  
+Possui foco em clareza visual, responsividade e automação do processo de exportação.
